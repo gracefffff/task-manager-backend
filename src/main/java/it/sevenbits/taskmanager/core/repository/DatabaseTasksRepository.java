@@ -1,15 +1,23 @@
 package it.sevenbits.taskmanager.core.repository;
+
 import it.sevenbits.taskmanager.core.model.Task;
 import it.sevenbits.taskmanager.core.model.TaskStatus;
 import it.sevenbits.taskmanager.web.models.UpdateTaskRequest;
 import org.springframework.jdbc.core.JdbcOperations;
+
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * this is class is representation of the interface ITaskRepository which working with database
+ */
 public class DatabaseTasksRepository implements ITaskRepository {
     private final JdbcOperations tasks;
 
-
+    /**
+     * this is constructor of this class
+     * @param jdbcOperations database where tasks will be
+     */
     public DatabaseTasksRepository(final JdbcOperations jdbcOperations) {
         tasks = jdbcOperations;
     }
