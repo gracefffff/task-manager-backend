@@ -58,15 +58,13 @@ public class TasksController {
     public ResponseEntity create(final  @Valid @RequestBody AddTaskRequest newTask) {
 
 
-        if (newTask != null && !newTask.getText().equals("")) {
+
             Task createdTask = taskRepository.create(newTask.getText());
             URI location = UriComponentsBuilder.fromPath("/tasks/")
                     .path(String.valueOf(createdTask.getId()))
                     .build().toUri();
             return ResponseEntity.created(location).build();
-        } else {
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
-        }
+
     }
 
     /**

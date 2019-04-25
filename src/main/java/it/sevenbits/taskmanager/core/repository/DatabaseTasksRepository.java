@@ -64,7 +64,7 @@ public class DatabaseTasksRepository implements ITaskRepository {
             return tasks.queryForObject(
                     "SELECT id, text, status, createdat, updatedat FROM task WHERE id = ?",
                     (resultSet, i) -> {
-                        String rowId = resultSet.getString(1);
+                        String rowId = resultSet.getString("id");
                         String rowName = resultSet.getString(2);
                         String rowStatus = resultSet.getString(3);
                         String rowCreatedAt = resultSet.getString(4);
