@@ -31,6 +31,7 @@ public class SimpleTaskRepository implements ITaskRepository {
 
     /**
      * this function returns list of Task with the same status
+     *
      * @param status -string value status of task
      * @return list of tasks with  equals status
      */
@@ -75,11 +76,5 @@ public class SimpleTaskRepository implements ITaskRepository {
     public boolean isTaskExist(final String id) {
         return tasks.containsKey(id);
     }
-
-    @Override
-    public boolean isEmpty() {
-        return tasks.isEmpty();
-    }
-
 
 }

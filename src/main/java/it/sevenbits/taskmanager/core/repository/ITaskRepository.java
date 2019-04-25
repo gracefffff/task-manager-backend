@@ -11,12 +11,14 @@ import java.util.List;
 public interface ITaskRepository {
     /**
      * this is function which return list of all tasks
+     *
      * @return List of Tasks
      */
     List<Task> getAllTasks();
 
     /**
      * this function are created new task
+     *
      * @param text - text or name of the task
      * @return new created Task
      */
@@ -24,19 +26,15 @@ public interface ITaskRepository {
 
     /**
      * this function returns list of Task with the same status
+     *
      * @param status -string value status of task
      * @return list of tasks with  equals status
      */
-     List<Task> getAllTaskByStatus(String status);
-    /**
-     * this function checks is repository empty or not
-     * @return boolean value true - if repository is empty
-     * false - if repository is not empty
-     */
-    boolean isEmpty();
+    List<Task> getAllTaskByStatus(String status);
 
     /**
      * this function return task by its id
+     *
      * @param id - id of the task
      * @return task if this repository contains this task or null
      */
@@ -44,6 +42,7 @@ public interface ITaskRepository {
 
     /**
      * this funciton delete task by its id
+     *
      * @param id - id of the task
      * @return task which was deleted
      */
@@ -51,6 +50,7 @@ public interface ITaskRepository {
 
     /**
      * this function is check existence of task
+     *
      * @param id - id of the task
      * @return true if this task is exist
      * false if this task is not exist
@@ -59,12 +59,12 @@ public interface ITaskRepository {
 
     /**
      * this function updates task by name and status
-     * @param id - id of the task
+     *
+     * @param id   - id of the task
      * @param task - this is object which contains updating new status and name
      * @return updated task
      */
     Task updateTask(String id, UpdateTaskRequest task);
-
 
 
 }

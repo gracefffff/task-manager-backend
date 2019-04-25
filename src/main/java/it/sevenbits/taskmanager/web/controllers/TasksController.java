@@ -115,11 +115,11 @@ public class TasksController {
         if (!taskRepository.isTaskExist(id)) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        if ((!TaskStatus.isExists(updateTask.getStatus()))) {
+        if ((!TaskStatus.isExists(updateTask.getStatus())) && (updateTask.getText() == null)) {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
         taskRepository.updateTask(id, updateTask);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
 
     }
 }

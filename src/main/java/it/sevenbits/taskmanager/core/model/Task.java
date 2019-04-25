@@ -13,6 +13,7 @@ public class Task {
     private String text;
     private TaskStatus status;
     private String createdAt;
+    private String updatedAt;
 
     /**
      * this is constructor of this class
@@ -27,22 +28,25 @@ public class Task {
         this.text = text;
         this.status = status;
         createdAt = getCurrentTime();
+        updatedAt = createdAt;
     }
 
     /**
-     * this is overloaded constructor of this class
+     * this is overloaded constructor of this class to set createdAt and updatedAt files
      *
      * @param id        this is ID of the Task
      * @param text      this is text or text of the Task
      * @param status    this is a status of Task
      * @param createdAt this is a time-date of creating tasks
+     * @param updatedAt this is a time-date of updating tasks
      */
     @JsonCreator
-    public Task(final @JsonProperty("id") String id, final @JsonProperty("text") String text, final @JsonProperty("status") TaskStatus status, final String createdAt) {
+    public Task(final @JsonProperty("id") String id, final @JsonProperty("text") String text, final @JsonProperty("status") TaskStatus status, final String createdAt, final String updatedAt) {
         this.id = id;
         this.text = text;
         this.status = status;
         this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     /**
@@ -98,6 +102,13 @@ public class Task {
      */
     public String getStatus() {
         return status.toString();
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+    public void setUpdatedAt(final String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 

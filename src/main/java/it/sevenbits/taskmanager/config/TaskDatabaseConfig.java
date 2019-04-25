@@ -18,10 +18,11 @@ import javax.sql.DataSource;
 public class TaskDatabaseConfig {
     /**
      * Function to create database connection
-     * @return  new DataSource to work with database
+     *
+     * @return new DataSource to work with database
      */
     @Bean
-   @FlywayDataSource
+    @FlywayDataSource
     @Qualifier("tasksDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.tasks")
     public DataSource tasksDataSource() {
@@ -30,7 +31,8 @@ public class TaskDatabaseConfig {
 
     /**
      * Function to get correct wrap over DataSource
-     * @param tasksDataSource- object contains connection to database
+     *
+     * @param tasksDataSource - object contains connection to database
      * @return new JdbcTemplate to work with database
      */
     @Bean
