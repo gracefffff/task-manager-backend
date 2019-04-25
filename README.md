@@ -1,8 +1,5 @@
 # task-manager-backend
 
-<<<<<<< HEAD
-
-
 
 * Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Install [Maven](https://maven.apache.org/)
@@ -24,4 +21,4 @@ GRANT ALL PRIVILEGES ON DATABASE localdb TO app_user;
 * To start the application, just run following commands in root project directory
 mvn package
 `java -jar task-manager-1.0-SNAPSHOT.jar`
->>>>>>> develop
+
