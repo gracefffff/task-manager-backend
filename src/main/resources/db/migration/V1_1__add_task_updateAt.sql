@@ -1,0 +1,1 @@
+ALTER TABLE task ADD updatedAt VARCHAR NOT NULL;
