@@ -1,7 +1,7 @@
 # task-manager-backend
-
+-----
 ## Install requires software
-------
+
 Before to get start, make sure that you have installed the next software for correct application work:
 
 * Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
